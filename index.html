@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+        <title>3JS Solar Sytem</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
+        crossorigin="anonymous">
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css"href="index.css">
+    </head>
+	<body>
+        <script src="js/three.js"></script>
+        <script src="js/OrbitControls.js"></script>
+        <script src="js/app.js"></script>
+        <div class="about">
+            <h2>About the Simulation</h2>
+            <p>This simulation uses the WebGL library ThreeJS to draw and animate the solar system geometry on an html5 canvas.<br>
+                I tried my best to model this solar system to accurate proportions to stay consistent with the real solar system to both make it <br>
+                more interesting to look at and to get a greater sense of the immensity of the solar system we find ourselves living in. <br>
+                Below I outline the data used to create the simulation.
+            </p>
+            <h4>The Size of the Planets</h4>
+            <p>To get <i>E</i> we use the suns diameter / 54.5. The suns radius is <a href="http://coolcosmos.ipac.caltech.edu/ask/5-How-large-is-the-Sun-compared-to-Earth-" target="_blank">109 times</a> greater than earths, but we use half.<br>
+                The <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/planet_table_ratio.html" target="_blank">proportions.</a><br>
+                <i>E = Earth's diameter</i></p>
+            <div class="col-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Mercury: 38% the size of Earth (E * 0.38)</li>
+                    <li class="list-group-item">Venus: 95% the size of Earth (E * 0.95)</li>
+                    <li class="list-group-item">Mars: 53% the size of Earth (E * 0.53)</li>
+                    <li class="list-group-item">Juptier: 1120% the size of Earth (E * 11.2)</li>
+                    <li class="list-group-item">Saturn: 945% the size of Earth (E * 9.45)</li>
+                    <li class="list-group-item">Uranus: 400% the size of Earth (E * 4.0)</li>
+                    <li class="list-group-item">Neptune: 388% the size of Earth (E * 3.88)</li>
+                  </ul>
+            </div>
+            <h4>The Distance of the Planets from the Sun</h4>
+            <p>This calculation uses the <a href="https://www.nasa.gov/sites/default/files/files/YOSS_Act1.pdf" target="_blank">average distance </a>of the planets from the sun <i>(S)</i> in millions of Kilometers <i>(mKM)</i> scaled down by 10. <br>
+            <small>* In the code, 5.1 is added to each calculation to offset from the edge of the sun rather than the center, noted as <i>D.</i></small></p>
+            <div class="col-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Mercury: 57mKM (S + 5.7 + D)</li>
+                    <li class="list-group-item">Venus: 108mKM (S + 10.8 + D)</li>
+                    <li class="list-group-item">Earth: 149mKM (S + 14.9 + D)</li>
+                    <li class="list-group-item">Mars: 228mKM (S + 22.8 + D)</li>
+                    <li class="list-group-item">Juptier: 780mKM (S + 78.0 + D)</li>
+                    <li class="list-group-item">Saturn: 1437mKM (S + 143.7 + D)</li>
+                    <li class="list-group-item">Uranus: 2871mKM (S + 287.1 + D)</li>
+                    <li class="list-group-item">Neptune: 4530mKM (S + 453.0 + D)</li>
+                  </ul>
+            </div>
+            <h4>The Orbit Speed of the Planets</h4>
+            <p>The <a href="https://nssdc.gsfc.nasa.gov/planetary/factsheet/" target="_blank">orbital velocity</a> in kilometers per second <i>(km/s)</i> scaled down by 10</p>
+            <div class="col-4">
+                <ul class="list-group">
+                    <li class="list-group-item">Mercury: 47.87 km/s (4.787)</li>
+                    <li class="list-group-item">Venus: 35.02 km/s (3.502)</li>
+                    <li class="list-group-item">Earth: 29.48 km/s (2.948)</li>
+                    <li class="list-group-item">Mars: 24.077 km/s (2.4077)</li>
+                    <li class="list-group-item">Juptier: 13.07 km/s (1.307)</li>
+                    <li class="list-group-item">Saturn: 9.69 km/s (0.969)</li>
+                    <li class="list-group-item">Uranus: 6.81 km/s (0.681)</li>
+                    <li class="list-group-item">Neptune: 5.43 km/s (0.543)</li>
+                  </ul>
+            </div>
+            <p>Special thanks to <a href="https://codepen.io/cl4ws0n/pen/eJjQzx?editors=0010" target="_blank">Danie Clawson's</a> CodePen for helping 
+                me figure out how to do the rotation animation and draw the oribital lines!</p>
+            <p>View the project on <a href="https://github.com/drewpoo99/3js-Solar-System" target="_blank">Github!</a> <br>
+            Created by <a href="https://vesseldesignco.com" target="_blank">Drew Weaver</a>, 2020</p>
+        </div>
+
+
+        <!-- Bootstrap -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" 
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" 
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+        crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" 
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" 
+        crossorigin="anonymous"></script>
+	</body>
+</html>

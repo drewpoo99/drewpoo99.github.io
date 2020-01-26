@@ -1,0 +1,33 @@
+body{
+    background-color: black;
+    margin: 0; 
+    font-family: 'Montserrat Alternates', sans-serif;
+}
+
+canvas { width: 100%; height: 100% }
+
+.about{
+    color: white;
+    margin-top: 10px;
+    text-align: center;
+    height: 1000px;
+    width: 100vw;
+}
+
+.about h2{
+    padding-top: 15px;
+}
+
+.col-4{
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.list-group{
+    color: white;
+}
+
+.list-group-item{
+    background-color: black;
+    border-color: lightgray;
+}
