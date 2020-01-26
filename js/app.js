@@ -6,7 +6,7 @@
 
     //set up the renderer
     var renderer = new THREE.WebGLRenderer();
-    renderer.setSize( window.innerWidth, window.innerHeight );
+    renderer.setSize( window.innerWidth, window.innerHeight - 50);
     document.body.appendChild( renderer.domElement );
 
     //user interaction controls
