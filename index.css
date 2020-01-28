@@ -7,6 +7,19 @@ body{
 
 canvas { width: 100%; height: 100% }
 
+#planetInfo{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    visibility: visible;
+    width: 15vw;
+}
+
+#planetInfo li{
+    font-size: 15px;
+}
+
 .about{
     color: white;
     margin-top: 10px;
