@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #77C4D3;
+ font-family: 'Montserrat', sans-serif;
+}
+
+.envelope-area {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 320px;
+  z-index: 6;
+}
+.envelope-area:hover {
+  cursor: pointer;
+}
+
+.envelope-back {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 200px;
+  height: 120px;
+  z-index: 1;
+  border-radius: 5px;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  background: #bac6bf;
+}
+
+.envelope-message {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 170px;
+  height: 90px;
+  z-index: 2;
+  border-radius: 5px;
+  border-top: 2px solid #da4848;
+  border-bottom: 2px solid #da4848;
+  border-right: 2px solid #da4848;
+  border-left: 2px solid #da4848;
+  background: #ee5252;
+  transition: top 2s, z-index 1s;
+  text-align: center;
+  padding-top: 45px;
+}
+
+.small-quote {
+  color: white;
+  font-size: 5px;
+}
+
+.envelope-message-area {
+  position: absolute;
+  margin: auto;
+  top: -50px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 140px;
+  height: 70px;
+  z-index: 0;
+}
+.envelope-message-area:hover {
+  cursor: pointer;
+}
+
+.envelope-opening {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  z-index: 3;
+  border-radius: 5px;
+  border-top: 60px solid #DAEDE2;
+  border-bottom: 60px solid transparent;
+  border-right: 100px solid transparent;
+  border-left: 100px solid transparent;
+  transition: all 1s;
+  transform-origin: top;
+}
+
+.envelope-front {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  z-index: 5;
+  border-radius: 5px;
+  border-top: 60px solid transparent;
+  border-bottom: 60px solid #DAEDE2;
+  border-right: 100px solid #DAEDE2;
+  border-left: 100px solid #DAEDE2;
+  transition: all 1s;
+}
+
+.envelope-shadow {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 200px;
+  height: 120px;
+  z-index: 0;
+  border-radius: 10px;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 1s;
+}
+
+.display-message {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  z-index: 3;
+  border-radius: 10px;
+  border-top: 10px solid #da4848;
+  border-bottom: 10px solid #da4848;
+  border-right: 10px solid #da4848;
+  border-left: 10px solid #da4848;
+  background: #ee5252;
+  color: white;
+  transition: all 2s;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-message {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  outline: none;
+  top: -10px;
+  right: -5px;
+}
+
+.quote-information {
+  max-width: 500px;
+}
+
+.display-message .quote-information .quote {
+  font-size: 0;
+  text-align: center;
+  transition: all 2s;
+}
+
+.display-message .quote-information .author {
+  font-size: 0;
+  text-align: right;
+  transition: all 2s;
+}
+
+.get-random-envelope {
+  position: absolute;
+  margin: auto;
+  top: 300px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 150px;
+  height: 25px;
+  z-index: 1;
+  border-radius: 10px;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  color: white;
+  background: black;
+  text-decoration: none;
+  text-align: center;
+  outline: none;
+}
+.get-random-envelope:hover {
+  background: white;
+  color: black;
+}
+
+.open-envelope {
+  transform: rotateX(-270deg);
+  border-top: 60px solid #a8a8a8;
+}
+
+.push-message {
+  top: -40px;
+  z-index: 5;
+}
+
+.envelope-glow {
+  box-shadow: 0 0 5px #f79292;
+}
+
+.envelope-msg-area-show {
+  z-index: 8;
+}
+
+.view-message {
+  width: 900px;
+  height: 900px;
+  opacity: 1;
+  z-index: 10;
+  line-height: 28px;
+}
